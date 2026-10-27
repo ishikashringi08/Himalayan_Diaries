@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel = "stylesheet" href = "login.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="header_main">
+        <img src="logo1.png" alt="Himalayan Diaries Logo"
+             class="logo">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Places</a>
+        <i class="fa-solid fa-user-lock"></i>
+    </div>
+
+    <div class="container">
+        <img src="signupbg1.jpg">
+        <div class="text">
+            <h1>WELCOME BACK</h1>
+            <h3>Signup to continue planning your Trip</h3>
+        </div>
+        <div class="info1">
+            <p>Full Name</p>
+            <p>Username</p>
+            <p>Email</p>
+            <p>Contact</p>
+            <p>Password</p>
+            <p>Confirm Password</p>
+        </div>
+        <div class="infoinput">
+            <input id="fullname" placeholder="Full Name" type="text" required>
+            <input id="username" placeholder="Username" type="text" required>
+            <input id="email" placeholder="abc@gmail.com" type="email" required>
+            <input id="contact" placeholder="Contact" type="tel" required>
+            <input id="password" placeholder="Password" type="password" required>
+            <input id="confirmPassword" placeholder="Confirm Password" type="password" required>
+        </div>
+        <div class="info7 info">
+            <a onclick="window.location.href='login.html'">Already had an Account? Login</a>
+        </div>
+        <button type="submit" onclick="signupAlert(event)">Signup</button>
+    </div>
+    <div class="container1">
+        <p>~Start Your Journey~</p>
+    </div>
+
+    <div class="footer1">
+        <div class = "para1">
+            <h3>Get to Know Us</h3>
+            <p>About Amazon</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Amazon Science</p>
+        </div>
+        <div class = "para2">
+            <h3>Connect with Us</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        <div class="para3">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Amazon App Download</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <h1>THANK-YOU</h1>
+
+    <script> 
+    function signupAlert(event){ 
+    event.preventDefault(); 
+    let password = document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+    let fullname = document.getElementById("fullname").value; 
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contact").value;
+    let confirmPassword = document.getElementById("confirmPassword").value; 
+    if (fullname==""||username==""||email==""||contact==""||(password=="" &&confirmPassword=="")){ 
+        alert("Enter all details."); return; } 
+    else if(password != confirmPassword){
+        alert("Password doesn't match! Enter again.");return
+    }
+    else{
+        alert("Signup successful! Welcome to Himalayan Diaries."); 
+        window.location.href = "main.html";
+    }
+    }
+    </script>
+
+
+</body>
+</html>

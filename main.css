@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #FFF8E7;
+}
+.header_main {
+    height: 85px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 5px 30px;
+}
+.header_main i {
+    color: #E8C98A;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.logo {
+    width: 270px;
+    height: 75px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+.header_main a {
+    color: #FFF8E7;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+.header_main a:hover {
+    color: #E8C98A;
+    border-bottom: 3px solid #E8C98A;
+}
+
+
+.container2 img{
+    width: 100%;
+    height: 400px;
+}
+.container2 .headings{
+    position: absolute;
+    display: block;
+    color: #173D2D;
+    display: block;
+    width: 350px;
+    top: 16%;
+    left: 5%;
+    .text1{
+        margin-top: 15px;
+        padding: 5px;
+    }
+}
+
+
+.container3{
+    border: #C9A45C solid 8px;
+    min-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.container4{
+    background-color: #FFF8E7;
+    color:#173D2D ;
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+}
+
+#heading {
+    /*position: absolute;
+    top: 35%;*/
+    color:#173D2D;
+    background-color: #E8C98A;
+    font-weight: 900;
+    white-space: nowrap;
+    /*position: relative;*/
+    animation: moveText 15s linear infinite;
+}
+
+/* DESTINATION CARDS SECTION */
+.container5 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px;
+    background-color: #FFF8E7;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* WELCOME SECTION */
+.container6 {
+    width: 100%;
+    min-height: 450px;
+    background-color: #FFF8E7;
+    padding: 40px 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXT AND IMAGE LAYOUT */
+.container7 {
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LEFT SIDE TEXT */
+.container7 .text2 {
+    flex: 1;
+    color: #173D2D;
+    text-align: left;
+}
+
+.container7 .text2 h5 {
+    color: #C9A45C;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.container7 .text2 h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.container7 .text2 p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* RIGHT SIDE IMAGE */
+.container7 img {
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container6 {
+        padding: 25px 5%;
+    }
+
+    .container7 {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .container7 .text2 {
+        text-align: center;
+    }
+
+    .container7 .text2 h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .container7 img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/* INDIVIDUAL DESTINATION CARD */
+.place-card {
+    background-color: white;
+    border: 1px solid #E8C98A;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(23, 61, 45, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* CARD HOVER EFFECT */
+.place-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(23, 61, 45, 0.25);
+}
+
+/* DESTINATION IMAGE */
+.place-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+/* IMAGE HOVER EFFECT */
+.place-card:hover img {
+    transform: scale(1.04);
+}
+
+/* CARD DETAILS */
+.place-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* DESTINATION NAME */
+.place-info h2 {
+    color: #173D2D;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* LOCATION */
+.place-info .location {
+    color: #795D2C;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* DESCRIPTION */
+.place-info p:not(.location):not(.rating) {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* RATING */
+.place-info .rating {
+    color: #B8860B;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* EXPLORE BUTTON */
+.place-info button {
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    border: 2px solid #173D2D;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.place-info button:hover {
+    background-color: #C9A45C;
+    color: #173D2D;
+    border-color: #C9A45C;
+}
+
+/* TABLETS: 2 CARDS PER ROW */
+@media (max-width: 1000px) {
+    .container5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+/* MOBILE: 1 CARD PER ROW */
+@media (max-width: 550px) {
+    .container5 {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .place-card img {
+        height: 230px;
+    }
+
+    .place-info h2 {
+        font-size: 20px;
+    }
+}
+
+/* HOTEL SECTION HEADING */
+.hotel-heading {
+    background-color: #FFF8E7;
+    color: #173D2D;
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.hotel-heading h1 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.hotel-heading p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* HOTEL CARDS: 4 IN ONE ROW */
+.hotel-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px;
+    background-color: #FFF8E7;
+}
+
+/* INDIVIDUAL HOTEL CARD */
+.hotel-card {
+    background-color: white;
+    border: 1px solid #E8C98A;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(23, 61, 45, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(23, 61, 45, 0.25);
+}
+
+/* HOTEL IMAGE */
+.hotel-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* HOTEL DETAILS */
+.hotel-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hotel-info h2 {
+    color: #173D2D;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.hotel-info p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* EXPLORE HOTEL BUTTON */
+.hotel-info button {
+    margin-top: auto;
+    padding: 12px 8px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    border: 2px solid #173D2D;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hotel-info button:hover {
+    background-color: #C9A45C;
+    color: #173D2D;
+    border-color: #C9A45C;
+}
+
+/* TABLETS: 2 CARDS PER ROW */
+@media (max-width: 1000px) {
+    .hotel-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE: 1 CARD PER ROW */
+@media (max-width: 550px) {
+    .hotel-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .hotel-heading h1 {
+        font-size: 26px;
+    }
+}
+
+/* TRANSPORTATION SECTION HEADING */
+.transport-heading {
+    background-color: #FFF8E7;
+    color: #173D2D;
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.transport-heading h1 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.transport-heading p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* TRANSPORTATION CARDS */
+.transport-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px;
+    background-color: #FFF8E7;
+}
+
+/* INDIVIDUAL CARD */
+.transport-card {
+    background-color: white;
+    border: 1px solid #E8C98A;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(23, 61, 45, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.transport-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(23, 61, 45, 0.25);
+}
+
+/* TRANSPORT IMAGE */
+.transport-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CARD CONTENT */
+.transport-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.transport-info h2 {
+    color: #173D2D;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.transport-info p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* BUTTON */
+.transport-info button {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 8px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    border: 2px solid #173D2D;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.transport-info button:hover {
+    background-color: #C9A45C;
+    color: #173D2D;
+    border-color: #C9A45C;
+}
+
+/* TABLET: TWO CARDS PER ROW */
+@media (max-width: 1000px) {
+    .transport-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE: ONE CARD PER ROW */
+@media (max-width: 550px) {
+    .transport-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .transport-heading h1 {
+        font-size: 26px;
+    }
+}
+
+.footer1{
+    height: 250px;
+    background-color: #FFF8E7;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    gap: 120px;
+}
+.para1,.para2,.para3{
+    margin-top: 7%;
+}
+h1{
+    text-align: center;
+}

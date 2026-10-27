@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #FFF8E7;
+}
+.header_main {
+    height: 85px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 5px 30px;
+}
+.header_main i {
+    color: #E8C98A;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.logo {
+    width: 270px;
+    height: 75px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+.header_main a {
+    color: #FFF8E7;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 5px;
+    transition: 0.3s;
+}
+.header_main a:hover {
+    color: #E8C98A;
+    border-bottom: 3px solid #E8C98A;
+}
+.container {
+    position: relative;
+    width: 100%;
+}
+.background {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.login {
+    position: absolute;
+    top: 82%;
+    right: 22%;
+    background-color: #E8C98A;
+    color: #173D2D;
+    height: 65px;
+    width: 180px;
+    border: none;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.signin {
+    position: absolute;
+    top: 82%;
+    right: 5%;
+    background-color: #E8C98A;
+    color: #173D2D;
+    height: 65px;
+    width: 180px;
+    border: none;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login:hover,
+.signin:hover {
+    background-color: #C9A45C;
+    transform: translateY(-3px);
+}
+.slogan {
+    border: #C9A45C solid 8px;
+    min-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    padding: 15px;
+}
+.section-title {
+    background-color: #FFF8E7;
+    color: #173D2D;
+    text-align: center;
+    font-size: 34px;
+    padding: 25px 10px;
+}
+.container1 {
+    background-color: #FFF8E7;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 0 35px 35px;
+    flex-wrap: wrap;
+}
+.card {
+    width: 270px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 18px 20px 24px;
+}
+.card-content h3 {
+    color: #173D2D;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+.card-content p {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.5;
+    min-height: 52px;
+}
+.gold-line {
+    width: 50px;
+    height: 4px;
+    background-color: #C9A45C;
+    border-radius: 5px;
+    margin: 25px auto 0;
+}
+.footer {
+    border: #C9A45C solid 8px;
+    min-height: 180px;
+    background-color: #173D2D;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 35px 20px;
+}
+.footer h2 {
+    color: #E8C98A;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+.footer p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .header_main {
+        gap: 15px;
+        padding: 5px 12px;
+        height: auto;
+        min-height: 75px;
+        flex-wrap: wrap;
+    }
+    .logo {
+        width: 150px;
+        height: 60px;
+        margin-right: 0;
+    }
+    .header_main a {
+        font-size: 15px;
+    }
+    .background {
+        height: 300px;
+    }
+    .login,
+    .signin {
+        width: 110px;
+        height: 45px;
+        font-size: 14px;
+        top: 70%;
+    }
+    .login {
+        right: 35%;
+    }
+    .signin {
+        right: 5%;
+    }
+    .slogan {
+        font-size: 25px;
+    }
+    .section-title {
+        font-size: 26px;
+    }
+    .container1 {
+        gap: 20px;
+        padding: 0 15px 25px;
+    }
+    .card {
+        width: min(100%, 300px);
+    }
+}
+.footer1{
+    height: 250px;
+    background-color: #FFF8E7;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    gap: 120px;
+}
+.para1,.para2,.para3{
+    margin-top: 7%;
+}
+h1{
+    text-align: center;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" href = "login.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="header_main">
+        <img src="logo1.png" alt="Himalayan Diaries Logo"
+             class="logo">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Places</a>
+        <i class="fa-solid fa-user-lock"></i>
+    </div>
+
+    <div class="container">
+        <img src="loginbg1.jpg">
+        <div class="text">
+            <h1>WELCOME BACK</h1>
+            <h3>Login to continue planning your Trip</h3>
+        </div>
+        <div class="info1">
+            <p>Username</p>
+            <p>Email</p>
+            <p>Password</p>
+        </div>
+        <div class="infoinput">
+            <input id="username" placeholder="Username" type="text" required>
+            <input id="email" placeholder="abc@gmail.com" type="email" required>
+            <input id="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="info4 info">
+            <a onclick="window.location.href='signup.html'">New Here? Create an Account</a>
+        </div>
+        <button onclick="loginAlert(event)">Login</button>
+    </div>
+    <div class="container1">
+        <p>~Start Your Journey~</p>
+    </div>
+
+    <div class="footer1">
+        <div class = "para1">
+            <h3>Get to Know Us</h3>
+            <p>About Amazon</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Amazon Science</p>
+        </div>
+        <div class = "para2">
+            <h3>Connect with Us</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        <div class="para3">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Amazon App Download</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <h1>THANK-YOU</h1>
+    <script> 
+    function loginAlert(event){ 
+    event.preventDefault(); 
+    let password = document.getElementById("password").value; 
+    if (password=="" | username=="" | email==""){ 
+        alert("Please enter the details"); return; 
+        } 
+        alert("Login successful! Welcome to Himalayan Diaries."); 
+        window.location.href = "main.html";
+    }
+    </script>
+</body>
+</html>

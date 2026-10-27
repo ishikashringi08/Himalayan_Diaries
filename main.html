@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Diaries</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="header_main">
+        <img src="logo1.png" alt="Himalayan Diaries Logo"
+             class="logo">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Places</a>
+        <i class="fa-solid fa-user-lock"></i>
+    </div>
+
+    <div class="container2">
+        <img src="Mainbggg1.jpg" alt="main">
+        <div class="headings">
+            <h1 class="text1">Explore the beauty of the himalayas</h1>
+            <h4 class="text1">mountains, Memories, Forever</h4>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search" style="font-size: 15px;">
+
+            <button onclick="searchPlaces()">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+</div>
+        </div>
+        <h1 id="heading">Welcome to Himalayan Diaries! The Himalayas — a timeless symbol of strength and beauty.</h1>
+    </div>
+
+    <div class="container3">
+        <p>EXPLORE NOW!</p>
+    </div>
+
+    <div class="container6">
+    <div class="container7">
+
+        <div class="text2">
+            <h5>WELCOME TO</h5>
+            <h1>Himalayan Diaries</h1>
+
+            <p>
+                Discover the breathtaking beauty of the Himalayas,
+                from snow-covered peaks to peaceful valleys and
+                sparkling rivers. Explore beautiful destinations,
+                experience local culture, and find inspiration
+                for your next mountain adventure.
+            </p>
+        </div>
+
+        <img src="sideimage.png" alt="Beautiful Himalayan mountain scenery">
+
+    </div>
+</div>
+    <div class="container3">
+        <p>Find Your Destination!!</p>
+    </div>
+
+    <div class="container4">
+        <h1 style = "text-decoration: underline;">Explore Beautiful Destinations</h1>
+        <p>From snow-capped passes to emerald valleys, pick the Himalayan story you want to live.</p>
+    </div>
+
+    <div class="container5">
+
+    <!-- Card 1 -->
+    <div class="place-card">
+        <img src="Spliti Valley.jpg" alt="Spiti Valley">
+
+        <div class="place-info">
+            <h2>Spiti Valley</h2>
+            <p class="location">📍 Himachal Pradesh, India</p>
+            <p>Discover rugged mountains, ancient monasteries, and beautiful cold deserts.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'spliti_valley.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="place-card">
+        <img src="Tirthan Valley.jpg" alt="Tirthan Valley">
+
+        <div class="place-info">
+            <h2>Tirthan Valley</h2>
+            <p class="location">📍 Himachal Pradesh, India</p>
+            <p>Enjoy peaceful rivers, green forests, and scenic mountain trails.</p>
+            <p class="rating">★ 4.7/5</p>
+            <button onclick="window.location.href = 'tirthan_valley.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="place-card">
+        <img src="Gulmarg J&K.jpg" alt="Gulmarg">
+
+        <div class="place-info">
+            <h2>Gulmarg</h2>
+            <p class="location">📍 Jammu and Kashmir, India</p>
+            <p>Experience snow-covered landscapes, mountain views, and alpine beauty.</p>
+            <p class="rating">★ 4.9/5</p>
+            <button onclick="window.location.href = 'gulmarg.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="place-card">
+        <img src="Nubra Valley.jpg" alt="Nubra Valley">
+
+        <div class="place-info">
+            <h2>Nubra Valley</h2>
+            <p class="location">📍 Ladakh, India</p>
+            <p>Explore dramatic mountain passes, sand dunes, and unique landscapes.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'nubra_valley.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="place-card">
+        <img src="Munsiyari.jpg" alt="Munsiyari">
+
+        <div class="place-info">
+            <h2>Munsiyari</h2>
+            <p class="location">📍 Uttarakhand, India</p>
+            <p>Admire majestic Himalayan peaks and explore beautiful mountain scenery.</p>
+            <p class="rating">★ 4.7/5</p>
+            <button onclick="window.location.href = 'munsiyari.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="place-card">
+        <img src="Chopta Valley.jpg" alt="Chopta">
+
+        <div class="place-info">
+            <h2>Chopta</h2>
+            <p class="location">📍 Uttarakhand, India</p>
+            <p>Discover peaceful meadows, forest trails, and spectacular mountain views.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'chopta_valley.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="place-card">
+        <img src="Tawang J&K.jpg" alt="Tawang Pass">
+
+        <div class="place-info">
+            <h2>Tawang Pass</h2>
+            <p class="location">📍 Himachal Pradesh, India</p>
+            <p>Witness dramatic mountain scenery and spectacular high-altitude views.</p>
+            <p class="rating">★ 4.7/5</p>
+            <button onclick="window.location.href = 'tawang_pass.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="place-card">
+        <img src="Pelling Sikkim.jpg" alt="Pelling">
+
+        <div class="place-info">
+            <h2>Pelling</h2>
+            <p class="location">📍 Sikkim, India</p>
+            <p>Enjoy breathtaking Kanchenjunga views and peaceful mountain surroundings.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'pelling_sikkim.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="place-card">
+        <img src="Rishikesh Uttrakhand.jpg" alt="Rishikesh">
+
+        <div class="place-info">
+            <h2>Rishikesh</h2>
+            <p class="location">📍 Uttarakhand, India</p>
+            <p>Experience riverside beauty, yoga traditions, and adventures in nature.</p>
+            <p class="rating">★ 4.7/5</p>
+            <button onclick="window.location.href = 'rishikesh.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="place-card">
+        <img src="Manali & Solang Valley HP.jpg" alt="Manali and Solang Valley">
+
+        <div class="place-info">
+            <h2>Manali & Solang Valley</h2>
+            <p class="location">📍 Himachal Pradesh, India</p>
+            <p>Discover green valleys, snowy peaks, and beautiful mountain landscapes.</p>
+            <p class="rating">★ 4.9/5</p>
+            <button onclick="window.location.href = 'manali.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="place-card">
+        <img src="Namche Bazar.jpg" alt="Namche Bazaar">
+
+        <div class="place-info">
+            <h2>Namche Bazaar</h2>
+            <p class="location">📍 Nepal</p>
+            <p>Discover mountain culture and incredible views in the Everest region.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'namche_bazar.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="place-card">
+        <img src="Pokhara Valley.jpg" alt="Pokhara Valley">
+
+        <div class="place-info">
+            <h2>Pokhara Valley</h2>
+            <p class="location">📍 Nepal</p>
+            <p>Admire serene lakes, green hills, and stunning Himalayan panoramas.</p>
+            <p class="rating">★ 4.8/5</p>
+            <button onclick="window.location.href = 'pokhara_valley.html'">
+                Explore Destination
+            </button>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container3">
+        <p>Find Your Stay!!</p>
+    </div>
+    <!-- EXPLORE HOTELS SECTION -->
+<div class="hotel-heading">
+    <h1>Explore Beautiful Hotels</h1>
+    <p>Find comfortable stays with breathtaking views of the Himalayas.</p>
+</div>
+
+<div class="hotel-container">
+
+    <div class="hotel-card">
+        <img src="hotel1.webp" alt="Mountain View Hotel">
+        <div class="hotel-info">
+            <h2>Mountain View Resort</h2>
+            <p>📍 Manali, Himachal Pradesh</p>
+            <p>Enjoy beautiful mountain views and a peaceful stay.</p>
+            <button onclick="alert('Explore Mountain View Resort!')">
+                Explore Hotel
+            </button>
+        </div>
+    </div>
+
+    <div class="hotel-card">
+        <img src="hotel2.webp" alt="Luxury Himalayan Hotel">
+        <div class="hotel-info">
+            <h2>Himalayan Retreat</h2>
+            <p>📍 Shimla, Himachal Pradesh</p>
+            <p>Relax in a cosy retreat surrounded by nature.</p>
+            <button onclick="alert('Explore Himalayan Retreat!')">
+                Explore Hotel
+            </button>
+        </div>
+    </div>
+
+    <div class="hotel-card">
+        <img src="hotel3.webp" alt="Valley View Hotel">
+        <div class="hotel-info">
+            <h2>Valley View Stay</h2>
+            <p>📍 Srinagar, Jammu and Kashmir</p>
+            <p>Discover scenic landscapes and comfortable rooms.</p>
+            <button onclick="alert('Explore Valley View Stay!')">
+                Explore Hotel
+            </button>
+        </div>
+    </div>
+
+    <div class="hotel-card">
+        <img src="hotel4.jpg" alt="Riverside Hotel">
+        <div class="hotel-info">
+            <h2>Riverside Escape</h2>
+            <p>📍 Rishikesh, Uttarakhand</p>
+            <p>Experience a relaxing stay beside the river.</p>
+            <button onclick="alert('Explore Riverside Escape!')">
+                Explore Hotel
+            </button>
+        </div>
+    </div>
+    
+
+</div>
+
+    <div class="container3">
+        <p>Find Your Transport!!</p>
+    </div>
+    <!-- TRANSPORTATION SECTION -->
+<div class="transport-heading">
+    <h1>Explore Transportation</h1>
+    <p>Choose your way to explore the beautiful Himalayas.</p>
+</div>
+
+<div class="transport-container">
+
+    <!-- FLIGHT -->
+    <div class="transport-card">
+        <img src="aeroplane.jpg" alt="Airplane in the sky">
+
+        <div class="transport-info">
+            <h2>✈️ Flight</h2>
+            <p>Reach Himalayan destinations faster and enjoy breathtaking aerial views.</p>
+
+            <button onclick="alert('Explore Flight Options!')">
+                Explore Flights
+            </button>
+        </div>
+    </div>
+
+    <!-- CAR -->
+    <div class="transport-card">
+        <img src="car1.jpg" alt="Car travelling through mountains">
+
+        <div class="transport-info">
+            <h2>🚗 Car</h2>
+            <p>Enjoy a comfortable road trip through scenic mountain roads and valleys.</p>
+
+            <button onclick="alert('Explore Car Travel Options!')">
+                Explore Cars
+            </button>
+        </div>
+    </div>
+
+    <!-- BIKE -->
+    <div class="transport-card">
+        <img src="bike1.jpg" alt="Bike on a Himalayan mountain road">
+
+        <div class="transport-info">
+            <h2>🏍️ Bike</h2>
+            <p>Experience an adventurous ride through mountain passes and winding roads.</p>
+
+            <button onclick="alert('Explore Bike Travel Options!')">
+                Explore Bikes
+            </button>
+        </div>
+    </div>
+
+    <!-- TRAIN -->
+    <div class="transport-card">
+        <img src="train.jpg" alt="Train travelling through mountains">
+
+        <div class="transport-info">
+            <h2>🚆 Train</h2>
+            <p>Enjoy a scenic railway journey through beautiful landscapes and valleys.</p>
+
+            <button onclick="alert('Explore Train Options!')">
+                Explore Trains
+            </button>
+        </div>
+    </div>
+
+</div>
+
+    <div class="footer1">
+        <div class = "para1">
+            <h3>Get to Know Us</h3>
+            <p>About Amazon</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Amazon Science</p>
+        </div>
+        <div class = "para2">
+            <h3>Connect with Us</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        <div class="para3">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Amazon App Download</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <h1>THANK-YOU</h1>
+</body>
+</html>
