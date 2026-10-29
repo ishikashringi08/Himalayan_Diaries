@@ -40,6 +40,256 @@ body {
     color: #E8C98A;
     border-bottom: 3px solid #E8C98A;
 }
+
+/*MAINNNNNNNNNNNNNNN*/
+
+.container{
+    color: #173D2D;
+    img{
+        height: 400px;
+        width: 100%;
+    }
+    .container_text{
+        position: absolute;
+        top: 16%;
+        left: 5%;
+        font-weight: bolder;
+    }
+}
+
+.container1{
+    font: italic;
+    color: #173D2D;
+    text-align: center;
+    background-color: #f8e9c6;
+    border: 2px solid #173D2D;
+    border-radius: 20px;
+}
+.container2{
+    margin: auto;
+    margin-top: 15px;
+    height: 150px;
+    width: 90%;
+    border: 2px solid #173D2D;
+    padding: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 180px;
+    background-color: #f8e9c6;
+    border-radius: 20px;
+    .box{
+        background-color: #FFF8E7;
+        height: 125px;
+        width: 225px;
+        text-align: center;
+        padding: 25px;
+        border: 4px solid #173D2D;
+        color: #173D2D;
+        border-radius: 20px;
+        i{
+            color: #173D2D;
+        }
+    }
+}
+
+.container3{
+    height: 280px;
+    display: flex;
+    gap: 300px;
+    row-gap: 15px;
+    padding: 25px;
+    color: #173D2D;
+    font-weight: 400;
+    .box3{
+        height: 80px;
+        padding: 15px;
+        width: 100%;
+        background-color: #f8e9c6;
+        border: 3px solid #173D2D;
+        border-radius: 20px;
+    }
+    .box1{
+        i{
+            font-size: xx-large;
+        }
+        width: 650px;
+        padding: 20px;
+    }
+    img{
+        height: 250px;
+        width: 650px;
+        border-radius: 20px;
+    }
+}
+
+.container4{
+    height: 330px;
+    i{
+        font-size: xx-large;
+    }
+    background-color: #f8e9c6;
+    display: flex;
+    margin: 10px;
+    font-size: larger;
+    row-gap: 20px;
+    gap: 25px;
+    padding: 20px;
+    color:#173D2D;
+    border: 3px solid #173D2D;
+    border-radius: 20px;
+    .text{
+        font-size: large;
+        font-weight: 400;
+    }
+    .box3{
+        i{
+            font-size: xx-large;
+        }
+        border: 3px solid #173D2D;
+        padding: 20px;
+        background-color: #FFF8E7;
+        border-radius: 20px;
+    }
+    .container7{
+        display: flex;
+        gap: 10px;
+    }
+    ._box{
+        height: 225px;
+    }
+}
+
+
+
+
+.container9{
+    display: flex;
+    height: 260px;
+    background-color: #f8e9c6;
+    color: #173D2D;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #173D2D;
+    img{
+        height:100px;
+        width: 150px;
+    }
+    ._box2{
+        text-align: center;
+        padding: 20px;
+        button{
+            height: 50px;
+            width: 120px;
+            background-color: orange;
+            border-radius: 20px;
+            border: 2px solid #173D2D;
+        }
+    }
+    .box5
+    {
+        display: flex;
+    }
+    .box4{
+        border: 3px solid #173D2D;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #FFF8E7;
+    }
+}
+
+.container10{
+    display: flex;
+    color: #173D2D;
+    margin: 20px;
+    gap: 180px;
+    padding: 20px;
+    border: 2px solid #173D2D;
+    border-radius: 20px;
+    .food{
+        border: 3px solid #173D2D;
+        padding: 20px;
+        width: 600px;
+        background-color: #FFF8E7;
+        border-radius: 20px;
+    }
+    background-color: #f8e9c6;
+    .foodpic{
+        display: flex;
+        gap: 30px;
+    }
+    img{
+        height: 70px;
+        width: 120px;
+    };
+    .thalispitivalley{
+        padding: 15px;
+        height: 250px;
+        width: 500px;
+    }
+    .map{
+        border: 3px solid #173D2D;
+        padding: 20px;
+        background-color: #FFF8E7;
+        border-radius: 20px;
+    }
+}
+
+.container11{
+    display: flex;
+    gap: 140px;
+    background-color:#f8e9c6; 
+    margin: 20px;
+    color: #173D2D;
+    padding: 20px;
+    border: 2px solid #173D2D;
+    border-radius: 20px;
+    .container12{
+        border-radius: 20px;
+        background-color: #FFF8E7;
+        border: 3px solid #173D2D;
+        padding: 20px;
+        width: 500px;
+        border-radius: 20px;
+        .set{
+            i{
+                font-size: x-large;
+            }
+            display: flex;
+        }
+    }
+    .info{
+        
+        margin: 5px;
+    }
+}
+
+.container13{
+    background-color: #FFF8E7;
+    color: #173D2D;
+    border: 3px solid #173D2D;
+    padding: 20px;
+    border-radius: 20px;
+    img{
+        height: 170px;
+        width: 200px;
+    }
+    .pic1,.pic2{
+        padding: 20px;
+        display: flex;
+        gap: 40px;
+    }
+}
+
+
+
+
+
+/*MAINNNNNNNNNNNNNNNNN*/
+
+
 .footer1{
     height: 250px;
     background-color: #FFF8E7;
