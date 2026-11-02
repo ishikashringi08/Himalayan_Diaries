@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain View Resort Booking</title>
+    <link rel="stylesheet" href="mountainviewresort.css">
+</head>
+
+<body>
+
+    <div class="contact_background">
+
+        <div class="contact_box">
+
+            <a href="javascript:history.back()" class="close_button">&times;</a>
+
+            <h1>BOOK YOUR STAY</h1>
+
+            <p>Enjoy a peaceful stay surrounded by beautiful Himalayan mountains.</p>
+
+            <form id="resortForm" novalidate>
+
+                <div class="resort_details">
+
+                    <div>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div>
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" placeholder="Enter your contact number">
+                    </div>
+
+                    <div>
+                        <label for="destination">Resort Location</label>
+                        <select id="destination">
+                            <option value="">Select Location</option>
+                            <option value="Manali">Manali</option>
+                            <option value="Shimla">Shimla</option>
+                            <option value="Spiti Valley">Spiti Valley</option>
+                            <option value="Tirthan Valley">Tirthan Valley</option>
+                            <option value="Gulmarg">Gulmarg</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin">
+                    </div>
+
+                    <div>
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout">
+                    </div>
+
+                    <div>
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests">
+                            <option value="">Select Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="rooms">Number of Rooms</label>
+                        <select id="rooms">
+                            <option value="">Select Rooms</option>
+                            <option value="1">1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="roomtype">Room Type</label>
+                        <select id="roomtype">
+                            <option value="">Select Room Type</option>
+                            <option value="Standard Room">Standard Room</option>
+                            <option value="Deluxe Room">Deluxe Room</option>
+                            <option value="Mountain View Room">Mountain View Room</option>
+                            <option value="Luxury Suite">Luxury Suite</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="confirmation">
+                    <input type="radio" id="confirm" name="confirmation" value="yes">
+
+                    <label for="confirm">
+                        I confirm that all the details provided above are correct.
+                    </label>
+                </div>
+
+                <button type="submit">CONFIRM BOOKING DETAILS</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("resortForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let fullname = document.getElementById("fullname").value.trim();
+            let email = document.getElementById("email");
+            let contact = document.getElementById("contact").value.trim();
+            let destination = document.getElementById("destination").value;
+            let checkin = document.getElementById("checkin").value;
+            let checkout = document.getElementById("checkout").value;
+            let guests = document.getElementById("guests").value;
+            let rooms = document.getElementById("rooms").value;
+            let roomtype = document.getElementById("roomtype").value;
+            let confirm = document.getElementById("confirm").checked;
+
+            if (
+                fullname === "" ||
+                email.value.trim() === "" ||
+                contact === "" ||
+                destination === "" ||
+                checkin === "" ||
+                checkout === "" ||
+                guests === "" ||
+                rooms === "" ||
+                roomtype === ""
+            ) {
+                alert("Please fill in all the details.");
+                return;
+            }
+
+            if (!email.checkValidity()) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(contact)) {
+                alert("Please enter a valid 10-digit contact number.");
+                return;
+            }
+
+            if (new Date(checkin) < new Date(new Date().toDateString())) {
+                alert("Please select a valid check-in date.");
+                return;
+            }
+
+            if (new Date(checkout) <= new Date(checkin)) {
+                alert("Check-out date must be after check-in date.");
+                return;
+            }
+
+            if (!confirm) {
+                alert("Please confirm your booking details.");
+                return;
+            }
+
+            alert("Your resort booking details have been submitted successfully!");
+
+            document.getElementById("resortForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html>

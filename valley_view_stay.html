@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley View Stay Booking</title>
+    <link rel="stylesheet" href="valley_view_stay.css">
+</head>
+
+<body>
+
+    <div class="contact_background">
+
+        <div class="contact_box">
+
+            <a href="javascript:history.back()" class="close_button">&times;</a>
+
+            <h1>Valley View Stay</h1>
+
+            <p class="subtitle">
+                Experience a relaxing stay surrounded by breathtaking valley views.
+            </p>
+
+            <form class="resort_details" onsubmit="return bookValleyStay(event)">
+
+                <div class="input_group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullname"
+                    placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input_group">
+                    <label>Email Address</label>
+                    <input type="email" id="email"
+                    placeholder="Enter your email" required>
+                </div>
+
+                <div class="input_group">
+                    <label>Contact Number</label>
+                    <input type="tel" id="contact"
+                    placeholder="Enter 10-digit mobile number"
+                    pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="input_group">
+                    <label>Destination</label>
+                    <select id="destination" required>
+                        <option value="">Select Destination</option>
+                        <option>Manali</option>
+                        <option>Shimla</option>
+                        <option>Spiti Valley</option>
+                        <option>Tirthan Valley</option>
+                        <option>Gulmarg</option>
+                        <option>Nubra Valley</option>
+                    </select>
+                </div>
+
+                <div class="input_group">
+                    <label>Check-in Date</label>
+                    <input type="date" id="checkin" required>
+                </div>
+
+                <div class="input_group">
+                    <label>Check-out Date</label>
+                    <input type="date" id="checkout" required>
+                </div>
+
+                <div class="input_group">
+                    <label>Number of Guests</label>
+                    <select id="guests" required>
+                        <option value="">Select Guests</option>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                        <option>6 Guests</option>
+                    </select>
+                </div>
+
+                <div class="input_group">
+                    <label>Number of Rooms</label>
+                    <select id="rooms" required>
+                        <option value="">Select Rooms</option>
+                        <option>1 Room</option>
+                        <option>2 Rooms</option>
+                        <option>3 Rooms</option>
+                        <option>4 Rooms</option>
+                    </select>
+                </div>
+
+                <div class="input_group full_width">
+                    <label>Room Type</label>
+                    <select id="roomtype" required>
+                        <option value="">Select Room Type</option>
+                        <option>Standard Room</option>
+                        <option>Deluxe Room</option>
+                        <option>Valley View Room</option>
+                        <option>Luxury Suite</option>
+                    </select>
+                </div>
+
+                <div class="confirmation full_width">
+                    <input type="checkbox" id="confirm" required>
+                    <label for="confirm">
+                        I confirm that the above details are correct.
+                    </label>
+                </div>
+
+                <button type="submit" class="book_button">
+                    Book Your Stay
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let today = new Date().toISOString().split("T")[0];
+
+        document.getElementById("checkin").min = today;
+        document.getElementById("checkout").min = today;
+
+        document.getElementById("checkin").addEventListener("change", function() {
+            document.getElementById("checkout").min = this.value;
+        });
+
+        function bookValleyStay(event) {
+
+            event.preventDefault();
+
+            let fullname = document.getElementById("fullname").value;
+            let contact = document.getElementById("contact").value;
+            let checkin = document.getElementById("checkin").value;
+            let checkout = document.getElementById("checkout").value;
+
+            if (!/^[0-9]{10}$/.test(contact)) {
+                alert("Please enter a valid 10-digit contact number.");
+                return false;
+            }
+
+            if (new Date(checkout) <= new Date(checkin)) {
+                alert("Check-out date must be after check-in date.");
+                return false;
+            }
+
+            if (!document.getElementById("confirm").checked) {
+                alert("Please confirm your booking details.");
+                return false;
+            }
+
+            alert(
+                "Thank you, " + fullname +
+                "! Your Valley View Stay booking request has been submitted successfully."
+            );
+
+            document.querySelector(".resort_details").reset();
+
+            return false;
+        }
+
+    </script>
+
+</body>
+</html>

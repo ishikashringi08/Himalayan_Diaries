@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* Background */
+
+.contact_background {
+    min-height: 100vh;
+
+    background-image: url("Mainbggg1.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    isolation: isolate;
+
+    padding: 30px;
+}
+
+.contact_background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("Mainbggg1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(6px);
+    transform: scale(1.03);
+
+    z-index: -1;
+}
+
+
+/* Main Box */
+
+.contact_box {
+
+    width: 650px;
+
+    background-color: rgba(255, 248, 231, 0.95);
+
+    border: 2px solid #C9A45C;
+
+    border-radius: 25px;
+
+    padding: 35px 45px;
+
+    position: relative;
+
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* Cross Button */
+
+.close_button {
+
+    position: absolute;
+
+    top: 12px;
+    right: 22px;
+
+    font-size: 35px;
+
+    color: #173D2D;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.close_button:hover {
+    color: #C9A45C;
+}
+
+
+/* Heading */
+
+.contact_box h1 {
+
+    text-align: center;
+
+    color: #173D2D;
+
+    font-size: 32px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+.subtitle {
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Contact Details */
+
+.contact_details {
+
+    margin-bottom: 25px;
+
+}
+
+.contact_details h2,
+.terms h2 {
+
+    color: #173D2D;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 2px solid #C9A45C;
+
+    padding-bottom: 8px;
+
+}
+
+.contact_details p,
+.terms p {
+
+    color: #444;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* Footer */
+
+.footer_text {
+
+    text-align: center;
+
+    color: #173D2D;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-top: 25px;
+
+}

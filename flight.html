@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Flight Booking - Himalayan Diaries</title>
+
+<link rel="stylesheet" href="flight.css">
+
+
+</head>
+
+<body>
+
+
+<div class="contact_background">
+
+    <div class="contact_box">
+
+        <!-- Close Button -->
+        <a href="javascript:history.back()" class="close_button">&times;</a>
+
+        <h1>BOOK YOUR FLIGHT</h1>
+
+        <p class="subtitle">
+            Begin your Himalayan journey with us!
+        </p>
+
+        <form id="flightForm" novalidate>
+
+            <div class="flight_details">
+
+                <label>Full Name *</label>
+                <input type="text" id="fullname" placeholder="Enter your full name">
+
+                <label>Email Address *</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+
+                <label>Departure City *</label>
+                <input type="text" id="departure" placeholder="Enter departure city">
+
+                <label>Destination *</label>
+                <input type="text" id="destination" placeholder="Enter destination">
+
+                <label>Departure Date *</label>
+                <input type="date" id="date">
+
+                <label>Number of Passengers *</label>
+
+                <select id="passengers">
+                    <option value="">Select passengers</option>
+                    <option value="1">1 Passenger</option>
+                    <option value="2">2 Passengers</option>
+                    <option value="3">3 Passengers</option>
+                    <option value="4">4 Passengers</option>
+                    <option value="5">5 Passengers</option>
+                </select>
+
+                <label>Travel Class *</label>
+
+                <select id="travelclass">
+                    <option value="">Select travel class</option>
+                    <option value="Economy">Economy Class</option>
+                    <option value="Business">Business Class</option>
+                    <option value="First">First Class</option>
+                </select>
+
+            </div>
+
+            <p class="required_note">
+                * All fields are mandatory.
+            </p>
+
+
+            <!-- Confirmation Radio Button -->
+
+            <div class="confirmation">
+
+                <input type="radio" id="confirm" name="confirmation" value="yes">
+
+                <label for="confirm">
+                    I confirm that all the details provided above are correct.
+                </label>
+
+            </div>
+
+
+            <!-- Submit Button -->
+
+            <button type="submit">CONFIRM FLIGHT DETAILS</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- JavaScript -->
+
+<script>
+
+    document.getElementById("flightForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        let fullname = document.getElementById("fullname").value.trim();
+
+        let email = document.getElementById("email").value.trim();
+
+        let departure = document.getElementById("departure").value.trim();
+
+        let destination = document.getElementById("destination").value.trim();
+
+        let date = document.getElementById("date").value;
+
+        let passengers = document.getElementById("passengers").value;
+
+        let travelclass = document.getElementById("travelclass").value;
+
+
+        // Check Empty Fields
+
+        if (
+            fullname === "" ||
+            email === "" ||
+            departure === "" ||
+            destination === "" ||
+            date === "" ||
+            passengers === "" ||
+            travelclass === ""
+        ) {
+
+            alert("Please fill all the details!");
+
+            return;
+
+        }
+
+
+        // Check Email Format
+
+        if (!document.getElementById("email").checkValidity()) {
+
+            alert("Please enter a valid email address!");
+
+            return;
+
+        }
+
+
+        // Check Departure and Destination
+
+        if (departure.toLowerCase() === destination.toLowerCase()) {
+
+            alert("Departure and destination cities cannot be the same!");
+
+            return;
+
+        }
+
+
+        // Check Confirmation Radio Button
+
+        let confirm = document.getElementById("confirm").checked;
+
+        if (!confirm) {
+
+            alert("Please confirm that all the details are correctly filled!");
+
+            return;
+
+        }
+
+
+        // Final Confirmation Alert
+
+        alert("Your flight details have been submitted successfully! Thank you for choosing Himalayan Diaries.");
+
+
+        // Reset Form
+
+        document.getElementById("flightForm").reset();
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

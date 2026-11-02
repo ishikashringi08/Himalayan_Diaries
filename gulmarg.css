@@ -47,6 +47,7 @@ body {
 
 .container{
     color: #173D2D;
+
     img{
         height: 400px;
         width: 100%;
@@ -110,10 +111,11 @@ body {
         background-color: #f8e9c6;
         border: 3px solid #173D2D;
         border-radius: 20px;
+
     }
     .box1{
         i{
-            font-size: xx-large;
+            font-size: x-large;
         }
         width: 650px;
         padding: 20px;

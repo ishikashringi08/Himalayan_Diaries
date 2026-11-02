@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental</title>
+    <link rel="stylesheet" href="bike.css">
+</head>
+
+<body>
+
+    <div class="contact_background">
+
+        <div class="contact_box">
+
+            <a href="javascript:history.back()" class="close_button">&times;</a>
+
+            <h1>RENT A BIKE</h1>
+
+            <p>Explore the beautiful Himalayas on your own ride.</p>
+
+            <form id="bikeForm" novalidate>
+
+                <div class="bike_details">
+
+                    <div>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div>
+                        <label for="pickup">Pickup Location</label>
+                        <input type="text" id="pickup" placeholder="Enter pickup location">
+                    </div>
+
+                    <div>
+                        <label for="returnlocation">Return Location</label>
+                        <input type="text" id="returnlocation" placeholder="Enter return location">
+                    </div>
+
+                    <div>
+                        <label for="startdate">Rental Start Date</label>
+                        <input type="date" id="startdate">
+                    </div>
+
+                    <div>
+                        <label for="enddate">Rental End Date</label>
+                        <input type="date" id="enddate">
+                    </div>
+
+                    <div>
+                        <label for="biketype">Select Bike Type</label>
+                        <select id="biketype">
+                            <option value="">Select Bike</option>
+                            <option value="Royal Enfield Classic 350">Royal Enfield Classic 350</option>
+                            <option value="Royal Enfield Himalayan">Royal Enfield Himalayan</option>
+                            <option value="Royal Enfield Hunter 350">Royal Enfield Hunter 350</option>
+                            <option value="Bajaj Pulsar">Bajaj Pulsar</option>
+                            <option value="KTM Duke">KTM Duke</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="duration">Rental Duration</label>
+                        <select id="duration">
+                            <option value="">Select Duration</option>
+                            <option value="1 Day">1 Day</option>
+                            <option value="2 Days">2 Days</option>
+                            <option value="3 Days">3 Days</option>
+                            <option value="4 Days">4 Days</option>
+                            <option value="5 Days">5 Days</option>
+                            <option value="1 Week">1 Week</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" id="contact" placeholder="Enter your contact number">
+                    </div>
+
+                </div>
+
+                <div class="confirmation">
+                    <input type="radio" id="confirm" name="confirmation" value="yes">
+                    <label for="confirm">I confirm that all the details provided above are correct.</label>
+                </div>
+
+                <button type="submit">CONFIRM BIKE RENTAL DETAILS</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("bikeForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let fullname = document.getElementById("fullname").value.trim();
+            let email = document.getElementById("email");
+            let pickup = document.getElementById("pickup").value.trim();
+            let returnlocation = document.getElementById("returnlocation").value.trim();
+            let startdate = document.getElementById("startdate").value;
+            let enddate = document.getElementById("enddate").value;
+            let biketype = document.getElementById("biketype").value;
+            let duration = document.getElementById("duration").value;
+            let contact = document.getElementById("contact").value.trim();
+            let confirm = document.getElementById("confirm").checked;
+
+            if (
+                fullname === "" ||
+                email.value.trim() === "" ||
+                pickup === "" ||
+                returnlocation === "" ||
+                startdate === "" ||
+                enddate === "" ||
+                biketype === "" ||
+                duration === "" ||
+                contact === ""
+            ) {
+                alert("Please fill in all the details.");
+                return;
+            }
+
+            if (!email.checkValidity()) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(contact)) {
+                alert("Please enter a valid 10-digit contact number.");
+                return;
+            }
+
+            if (new Date(startdate) < new Date(new Date().toDateString())) {
+                alert("Please select a valid rental start date.");
+                return;
+            }
+
+            if (new Date(enddate) <= new Date(startdate)) {
+                alert("Rental end date must be after the start date.");
+                return;
+            }
+
+            if (!confirm) {
+                alert("Please confirm your rental details.");
+                return;
+            }
+
+            alert("Your bike rental details have been submitted successfully!");
+
+            document.getElementById("bikeForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html>

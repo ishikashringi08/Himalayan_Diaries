@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Background */
+
+.contact_background {
+
+min-height: 100vh;
+
+background-image: url("Mainbggg1.jpg");
+
+background-size: cover;
+background-position: center;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+position: relative;
+isolation: isolate;
+
+padding: 30px;
+
+}
+
+.contact_background::before {
+
+content: "";
+
+position: absolute;
+inset: 0;
+
+background-image: url("Mainbggg1.jpg");
+
+background-size: cover;
+background-position: center;
+
+filter: blur(6px);
+
+transform: scale(1.03);
+
+z-index: -1;
+
+
+}
+
+/* Main Booking Box */
+
+.contact_box {
+
+width: 650px;
+
+background-color: #FFF8E7;
+
+border: 2px solid #C9A45C;
+
+border-radius: 25px;
+
+padding: 35px 45px;
+
+position: relative;
+
+box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Close Button */
+
+.close_button {
+
+position: absolute;
+
+top: 12px;
+right: 22px;
+
+font-size: 35px;
+
+color: #173D2D;
+
+text-decoration: none;
+
+cursor: pointer;
+
+
+}
+
+.close_button:hover {
+color: #C9A45C;
+
+}
+
+/* Main Heading */
+
+.contact_box h1 {
+
+text-align: center;
+
+color: #173D2D;
+
+font-size: 32px;
+
+letter-spacing: 2px;
+
+margin-bottom: 10px;
+
+}
+
+/* Subtitle */
+
+.subtitle {
+
+text-align: center;
+
+color: #666;
+
+font-size: 15px;
+
+margin-bottom: 25px;
+
+}
+
+/* Train Details */
+
+.train_details {
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+.train_details label {
+
+color: #173D2D;
+
+font-size: 16px;
+
+margin-bottom: 7px;
+
+}
+
+.train_details input,
+.train_details select {
+
+width: 100%;
+
+padding: 12px;
+
+margin-bottom: 15px;
+
+border: 1px solid #C9A45C;
+
+border-radius: 8px;
+
+background-color: white;
+
+font-family: Georgia, serif;
+
+font-size: 14px;
+
+outline: none;
+
+}
+
+/* Input Focus */
+
+.train_details input:focus,
+.train_details select:focus {
+
+border: 2px solid #173D2D;
+
+}
+
+/* Required Note */
+
+.required_note {
+
+color: #666;
+
+font-size: 12px;
+
+margin-bottom: 15px;
+
+}
+
+/* Confirmation Radio Button */
+
+.confirmation {
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+margin-bottom: 18px;
+
+}
+
+.confirmation input {
+
+width: 17px;
+
+height: 17px;
+
+accent-color: #173D2D;
+
+cursor: pointer;
+
+flex-shrink: 0;
+
+}
+
+.confirmation label {
+
+color: #173D2D;
+
+font-size: 13px;
+
+cursor: pointer;
+
+}
+
+/* Submit Button */
+
+.contact_box button {
+
+width: 100%;
+
+background-color: #173D2D;
+
+color: white;
+
+padding: 13px;
+
+border: none;
+
+border-radius: 8px;
+
+font-size: 16px;
+
+font-family: Georgia, serif;
+
+letter-spacing: 1px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+.contact_box button:hover {
+
+background-color: #C9A45C;
+
+color: #173D2D;
+
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+
+.contact_box {
+
+    width: 100%;
+
+    padding: 30px 22px;
+
+}
+
+.contact_box h1 {
+
+    font-size: 25px;
+
+}
+
+.confirmation label {
+
+    font-size: 12px;
+
+}
+
+
+}
